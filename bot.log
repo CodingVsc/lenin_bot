@@ -1,0 +1,217 @@
+2024-07-07 11:30:20,256 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /home/max/PycharmProjects/LeninBot/app.py:218> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 228, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/usr/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 225, in main
+    await monitor.start()
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 58, in start
+    await asyncio.gather(self.open_initial_positions(), self.monitor_positions())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 27, in open_initial_positions
+    if len(self.symbols) > 0:
+KeyboardInterrupt
+2024-07-07 12:06:31,836 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /home/max/PycharmProjects/LeninBot/app.py:218> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 228, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/usr/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 225, in main
+    await monitor.start()
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 58, in start
+    await asyncio.gather(self.open_initial_positions(), self.monitor_positions())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 44, in monitor_positions
+    await self.exchange.set_stop_losses(symbol, self.stop_loss_percentage)
+  File "/home/max/PycharmProjects/LeninBot/exchange.py", line 135, in set_stop_losses
+    price_precision = (await self.get_precisions(symbol))[0]
+  File "/home/max/PycharmProjects/LeninBot/exchange.py", line 69, in get_precisions
+    instruments_info = self.session.get_instruments_info(
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/pybit/_v5_market.py", line 111, in get_instruments_info
+    return self._submit_request(
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 284, in _submit_request
+    s = self.client.send(r, timeout=self.timeout)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
+2024-07-10 18:35:35,521 - root - ERROR - Unexpected error: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+Traceback (most recent call last):
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 209, in run
+    self.bot.polling(none_stop=True, interval=0, timeout=20)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/telebot/__init__.py", line 1175, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/telebot/__init__.py", line 294, in user
+    self._user = self.get_me()
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/telebot/__init__.py", line 1362, in get_me
+    apihelper.get_me(self.token)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/telebot/apihelper.py", line 202, in get_me
+    return _make_request(token, method_url)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/home/max/PycharmProjects/LeninBot/.venv/lib/python3.10/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+2024-07-10 18:35:40,780 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /home/max/PycharmProjects/LeninBot/app.py:218> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 228, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/usr/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 225, in main
+    await monitor.start()
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 58, in start
+    await asyncio.gather(self.open_initial_positions(), self.monitor_positions())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 27, in open_initial_positions
+    if len(self.symbols) > 0:
+KeyboardInterrupt
+2024-07-10 18:37:01,460 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /home/max/PycharmProjects/LeninBot/app.py:218> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 228, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/usr/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 225, in main
+    await monitor.start()
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 58, in start
+    await asyncio.gather(self.open_initial_positions(), self.monitor_positions())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 27, in open_initial_positions
+    if len(self.symbols) > 0:
+KeyboardInterrupt
+2024-07-10 18:37:30,556 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /home/max/PycharmProjects/LeninBot/app.py:218> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 228, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/usr/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 225, in main
+    await monitor.start()
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 58, in start
+    await asyncio.gather(self.open_initial_positions(), self.monitor_positions())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/max/PycharmProjects/LeninBot/app.py", line 27, in open_initial_positions
+    if len(self.symbols) > 0:
+KeyboardInterrupt
